@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Web Page</title>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-color: #f6f7f9;
+            }
+
+            header {
+                height: 100px;
+                padding: 0 40px;
+            }
+
+            header > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .fixed-container {
+                max-width: 1000px;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            section {
+                padding: 40px;
+            }
+
+            .name-representation {
+                height: 300px;
+            }
+
+            section.name-representation > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                background-image: url("img/leon.png");
+                background-size: contain; /* чтобы изображение чисто вместилось в фон */
+                background-repeat: no-repeat; /* чтобы не повторялось на фоне */
+                background-position: right center; /* выравнивание */
+            }
+
+            .coatings {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+            }
+
+            .coatings > div {
+                width: 200px;
+            }
+
+            .coatings img {
+                width: 150px;
+            }
+
+            .blue-back {
+                background-color: #3d69eb;
+                color: white;
+            }
+
+            footer {
+                padding: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="fixed-container">
+                <div>
+                    <a href="#">Главная</a>
+                    <a href="#">Продукты</a>
+                    <a href="#">О нас</a>
+                </div>
+                <div>
+                    <span>8 800 555-35-35</span>
+                    <button>Сделать заказ</button>
+                </div>
+            </div>
+        </header>
+        <section class="name-representation">
+            <div class="fixed-container">
+                <h1>LEON S. KENNEDY</h1>
+                <p>Телохранитель президента и просто классный чел</p>
+                <button>Узнать больше</button>
+            </div>
+        </section>
+        <section>
+            <div class="fixed-container">
+                <h2>Кожаные куртки</h2>
+                <div class="coatings">
+                    <div>
+                        <img src="img/pngtree-plain-black-bomber-jacket-png-image_16104870.png" alt="">
+                        Стандартная кожаная куртка
+                    </div>
+                    <div>
+                        <img src="img/pngtree-plain-black-bomber-jacket-png-image_16104870.png" alt="">
+                        Черная кожаная куртка
+                    </div>
+                    <div>
+                        <img src="img/pngtree-plain-black-bomber-jacket-png-image_16104870.png" alt="">
+                        Кожанка для панков
+                    </div>
+                </div>
+                <button>Сделать заказ</button>
+            </div>
+        </section>
+        <section>
+            <div class="fixed-container">
+                <h2>Обтягивающие футболки</h2>
+            </div>
+        </section>
+        <section class="blue-back">
+            <div class="fixed-container">
+                <h2>Жёстко наверстал</h2>
+            </div>
+        </section>
+        <footer>
+            <div class="fixed-container">
+                <a href="#">Главная</a>
+                <a href="#">Продукты</a>
+                <a href="#">О нас</a> 
+            </div>
+        </footer>
+    </body>
+</html>
