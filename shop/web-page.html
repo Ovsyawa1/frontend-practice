@@ -2,75 +2,25 @@
 <html>
     <head>
         <title>My Web Page</title>
-        <style>
-            html, body {
-                margin: 0;
-                padding: 0;
-                background-color: #f6f7f9;
-            }
-
-            header {
-                height: 100px;
-                padding: 0 40px;
-            }
-
-            header > div {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .fixed-container {
-                max-width: 1000px;
-                height: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            section {
-                padding: 40px;
-            }
-
-            .name-representation {
-                height: 300px;
-            }
-
-            section.name-representation > div {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                background-image: url("img/leon.png");
-                background-size: contain; /* чтобы изображение чисто вместилось в фон */
-                background-repeat: no-repeat; /* чтобы не повторялось на фоне */
-                background-position: right center; /* выравнивание */
-            }
-
-            .coatings {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 30px;
-            }
-
-            .coatings > div {
-                width: 200px;
-            }
-
-            .coatings img {
-                width: 150px;
-            }
-
-            .blue-back {
-                background-color: #3d69eb;
-                color: white;
-            }
-
-            footer {
-                padding: 40px;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script>
+            // docuemnt - это DOM модель, EventListener - слушатель событий, DOMContentLoaded - это параметр, который надо слушать, function() - анонимная функция
+            // Анонимная функция - это логика, которая происходит после выполнения слушателя событий
+            document.addEventListener("DOMContentLoaded", function(){
+                var container = document.querySelector('.popup-container')
+                var popupButtons = document.querySelectorAll('.open-popup') // 
+                for (let i = 0; i < popupButtons.length; i++) {
+                    popupButtons[i].addEventListener('click', function(){
+                        container.style.display = 'flex'
+                    })
+                }
+            });
+        </script>
     </head>
     <body>
+        <div class="popup-container">
+            <form class="popup"></form>
+        </div>
         <header>
             <div class="fixed-container">
                 <div>
@@ -80,7 +30,7 @@
                 </div>
                 <div>
                     <span>8 800 555-35-35</span>
-                    <button>Сделать заказ</button>
+                    <button class="light-button open-popup">Сделать заказ</button>
                 </div>
             </div>
         </header>
@@ -88,7 +38,7 @@
             <div class="fixed-container">
                 <h1>LEON S. KENNEDY</h1>
                 <p>Телохранитель президента и просто классный чел</p>
-                <button>Узнать больше</button>
+                <button class="dark-button open-popup">Узнать больше</button>
             </div>
         </section>
         <section>
@@ -108,7 +58,7 @@
                         Кожанка для панков
                     </div>
                 </div>
-                <button>Сделать заказ</button>
+                <button class="light-button open-popup">Сделать заказ</button>
             </div>
         </section>
         <section>
